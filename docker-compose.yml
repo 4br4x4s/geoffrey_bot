@@ -21,8 +21,8 @@ services:
     depends_on:
       - mongog
 
-  mongo_expressg:
-    container_name: mongo-expressg
+  mongo_express:
+    container_name: mongo-express
     image: mongo-express:latest
     restart: always
     ports:
