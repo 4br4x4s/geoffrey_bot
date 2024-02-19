@@ -387,8 +387,8 @@ async def transcribe_audio(audio_file) -> str:
     return r["text"] or ""
 
 
-async def generate_images(prompt, n_images=4, size="512x512"):
-    r = await aclient.images.generate(prompt=prompt, n=n_images, size=size)
+async def generate_images(prompt, model="dall-e-3", n_images=1, size="1024x1024", quality="hd"):
+    r = await aclient.images.generate(prompt=prompt, model=model, n=n_images, size=size, quality=quality)
     image_urls = [item.url for item in r.data]
     return image_urls
 
