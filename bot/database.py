@@ -9,7 +9,7 @@ import config
 class Database:
     def __init__(self):
         self.client = MongoClient(config.mongodb_uri)
-        self.db: MongoClient = self.client["chatgpt_telegram_botg"]
+        self.db: MongoClient = self.client["chatgpt_telegram_bot"]
 
         self.user_collection = self.db["user"]
         self.dialog_collection = self.db["dialog"]
